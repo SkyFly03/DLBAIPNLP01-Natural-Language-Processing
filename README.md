@@ -158,3 +158,8 @@ All packages are installed via `pip` or `conda` in a custom environment.
 **Conclusion**:  
 DistilBERT is the most effective model in this study for binary sentiment classification across varied datasets and input lengths.
 
+---
+
+Disclaimer
+This project is created for educational purposes only as part of an academic assignment.
+It is not affiliated with or endorsed by Rotten Tomatoes, SST or IMDb. All data used is publicly available from Kaggle, stanford.edu and Hugging Face.
