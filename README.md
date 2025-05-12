@@ -7,9 +7,9 @@ This project builds and compares sentiment classification models using movie rev
 ---
 
 ## 3 Datasets:
-- **1. Rotten Tomatoes Critic Reviews** (Kaggle) – 250,000+ reviews (sampled for small-scale testing)  
-- **2. Stanford Sentiment Treebank (SST)** – 11,855 labeled sentences (intermediate complexity)  
-- **3. IMDb Dataset** (Hugging Face) – 50,000 labeled reviews (large-scale validation)
+- **1). Rotten Tomatoes Critic Reviews** (Kaggle) – 250,000+ reviews (sampled for small-scale testing)  
+- **2). Stanford Sentiment Treebank (SST)** – 11,855 labeled sentences (intermediate complexity)  
+- **3). IMDb Dataset** (Hugging Face) – 50,000 labeled reviews (large-scale validation)
 
 The objective is to first develop and tune models on a smaller dataset, then test them on progressively larger datasets to measure generalization and robustness.
 
@@ -147,9 +147,9 @@ All packages are installed via `pip` or `conda` in a custom environment.
 
 - Across all three datasets, DistilBERT achieved the highest F1 scores in most cases:
 
-> **Rotten Tomatoes**: DistilBERT (F1 = 87.7%) exceeded all classical models  
-> **SST**: DistilBERT (F1 = 91.4%) surpassed Logistic Regression (80.6%)  
-> **IMDb**: Logistic Regression (F1 = 89.1%) slightly outperformed DistilBERT (89.0%)
+> - **Rotten Tomatoes**: DistilBERT (F1 = 87.7%) exceeded all classical models  
+> - **SST**: DistilBERT (F1 = 91.4%) surpassed Logistic Regression (80.6%)  
+> - **IMDb**: Logistic Regression (F1 = 89.1%) slightly outperformed DistilBERT (89.0%)
 
 - Classical models like Logistic Regression and SVM delivered strong results when paired with TF-IDF  
 - DistilBERT showed the best **overall consistency and generalization**, especially on short-to-medium inputs
