@@ -1,0 +1,50 @@
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+
+# VSCode and PyCharm settings
+.vscode/
+.idea/
+
+# macOS & Windows system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files and logs
+*.log
+.cache/
+*.tmp
+
+# Hugging Face & Transformers cache
+huggingface/
+*.model
+*.tokenizer
+*.lock
+
+# Optional: large/unnecessary data files
+*.csv
+*.tsv
+*.json
+*.xlsx
+
+# Optional: model weights
+*.pt
+*.h5
+*.bin
+
+# Optional: exported charts or images (if regenerated)
+figures/
+outputs/
+plots/
