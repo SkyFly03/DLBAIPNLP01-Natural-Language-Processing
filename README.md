@@ -1,3 +1,16 @@
+## ▸ Project Overview
+- **Sentiment classification:** binary sentiment on movie review text  
+- **Progressive evaluation:** small → medium → large datasets for robustness checks  
+- **Model comparison:** classical ML + transformer-based baseline (DistilBERT)
+
+## ▸ Why this project matters
+- **End-to-end NLP workflow:** preprocessing, vectorization, training, evaluation  
+- **Practical benchmarking:** compares approaches across dataset scales  
+- **Transferable setup:** reusable pipeline for text classification tasks
+
+---
+---
+
 # DLBAIPNLP01 – Natural Language Processing (NLP)
 
 ## Task 1: Sentiment Analysis on Movie Reviews ![image](https://github.com/user-attachments/assets/8f31d0ef-3732-4a45-b288-580a4c27c444)
@@ -7,11 +20,10 @@ This project builds and compares sentiment classification models using movie rev
 ---
 
 ## 3 Datasets:
-- **1). Rotten Tomatoes Critic Reviews** (Kaggle) – 250,000+ reviews (sampled for small-scale testing)  
-- **2). Stanford Sentiment Treebank (SST)** – 11,855 labeled sentences (intermediate complexity)  
-- **3). IMDb Dataset** (Hugging Face) – 50,000 labeled reviews (large-scale validation)
-
 The objective is to first develop and tune models on a smaller dataset, then test them on progressively larger datasets to measure generalization and robustness.
+- **1). Rotten Tomatoes Critic Reviews** (Kaggle) – 250,000+ reviews (sampled for small-scale testing)  
+- **2). SST-2 (Stanford Sentiment Treebank – binary)** (Hugging Face / GLUE) – ~70,000 labeled reviews (intermediate complexity)  
+- **3). IMDb Dataset** (Hugging Face) – 50,000 labeled reviews (large-scale validation)
 
 ---
 
@@ -36,8 +48,17 @@ The key libraries used include:
 - `matplotlib`, `seaborn` – for visualization  
 - `datasets`, `kaggle` – for loading and downloading datasets  
 
-All packages are installed via `pip` or `conda` in a custom environment.
+All packages are installed via `pip` in a custom environment.
 
+### Run locally
+
+```bash
+git clone https://github.com/SkyFly03/DLBAIPNLP01-Natural-Language-Processing.git
+cd DLBAIPNLP01-Natural-Language-Processing
+
+pip install -r requirements.txt
+jupyter lab
+```
 ---
 
 ## 3. Dataset Overview and Analysis
@@ -77,12 +98,12 @@ All packages are installed via `pip` or `conda` in a custom environment.
 
 ---
 
-### 3.2 Stanford Sentiment Treebank (Intermediate Testing)
+### 3.2 Stanford Sentiment Treebank (SST-2) (Intermediate Testing)
 
-- **Source**: [GLUE benchmark via Hugging Face – SST-2](https://nlp.stanford.edu/sentiment/index.html)  
-- **Size**: ~67,000 labeled sentences  
-- **Labels**: Binary sentiment (positive = 1, negative = 0)  
-- **Goal**: Evaluate sentence-level model generalization
+- **Source**: [Hugging Face – GLUE (sst2)](https://huggingface.co/datasets/nyu-mll/glue/viewer/sst2)
+- **Size**: ~70,000 labeled short movie reviews (sentence-level)
+- **Labels**: Binary sentiment (positive = 1, negative = 0)
+- **Goal**: Evaluate sentence-level generalization on an intermediate-sized benchmark
 
 #### 3.2.1 Data Cleaning
 
@@ -148,7 +169,7 @@ All packages are installed via `pip` or `conda` in a custom environment.
 - Across all three datasets, DistilBERT achieved the highest F1 scores in most cases:
 
 > - **Rotten Tomatoes**: DistilBERT (F1 = 87.7%) exceeded all classical models  
-> - **SST**: DistilBERT (F1 = 91.4%) surpassed Logistic Regression (80.6%)  
+> - **SST-2**: DistilBERT (F1 = 91.4%) surpassed Logistic Regression (80.6%)  
 > - **IMDb**: Logistic Regression (F1 = 89.1%) slightly outperformed DistilBERT (89.0%)
 
 - Classical models like Logistic Regression and SVM delivered strong results when paired with TF-IDF  
@@ -160,7 +181,8 @@ DistilBERT is the most effective model in this study for binary sentiment classi
 
 ---
 
-Disclaimer
+## Data & Attribution
 
-This project is created for educational purposes only as part of an academic assignment.
-It is not affiliated with or endorsed by Rotten Tomatoes, SST or IMDb. All data used is publicly available from Kaggle, stanford.edu and Hugging Face.
+This project uses publicly available datasets from Kaggle, Stanford University, and Hugging Face.
+The work was conducted in an academic context and is not affiliated with or endorsed by the data providers.
+
