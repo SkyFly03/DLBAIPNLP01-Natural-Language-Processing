@@ -1,12 +1,18 @@
 ## ▸ Project Overview
-- **Sentiment classification:** binary sentiment on movie review text  
-- **Progressive evaluation:** small → medium → large datasets for robustness checks  
-- **Model comparison:** classical ML + transformer-based baseline (DistilBERT)
+- **Sentiment classification pipeline:** preprocessing, vectorization, modeling, and evaluation  
+- **Progressive benchmarking:** small → medium → large datasets to assess generalization  
+- **Model comparison:** classical ML approaches and transformer-based baseline (DistilBERT)
 
-## ▸ Why this project matters
-- **End-to-end NLP workflow:** preprocessing, vectorization, training, evaluation  
-- **Practical benchmarking:** compares approaches across dataset scales  
-- **Transferable setup:** reusable pipeline for text classification tasks
+## ▸ Tech Stack
+- **Language:** Python  
+- **NLP & ML:** scikit-learn, spaCy, NLTK  
+- **Deep Learning:** Hugging Face Transformers, PyTorch  
+- **Data access:** Hugging Face Datasets, Kaggle  
+- **Workflow:** JupyterLab
+
+## ▸ Project Context
+- **Academic origin:** university project  
+- **Design goal:** structured NLP workflow reflecting applied text classification practice
 
 ---
 ---
